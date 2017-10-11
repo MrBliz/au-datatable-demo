@@ -13,7 +13,7 @@
         "launchBrowser": true,
         "environmentVariables": {
           "ASPNETCORE_ENVIRONMENT": "Development",
-          "nFinitiEndPoint": "http://localhost:5000/"
+         
         }
       },
       "nFiniti.Dashboard": {
@@ -21,7 +21,7 @@
         "applicationUrl": "http://localhost:9000/",
          "environmentVariables": {
           "ASPNETCORE_ENVIRONMENT": "Development",
-          "nFinitiEndPoint": "http://localhost:5000"
+          
         }
       }
     }
