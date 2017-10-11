@@ -27,14 +27,14 @@ export class App {
             settings: { icon: 'th-list' },
             moduleId: PLATFORM.moduleName('../server-side-demo-page/server-side-demo-page'),
             nav: true,
-            title: 'Au Datatable - Working'
+            title: 'Au Datatable - TAalbers'
         }, {
             route: 'audatatabletest',
             name: 'audatatabletest',
             settings: { icon: 'th-list' },
             moduleId: PLATFORM.moduleName('../audatatable/audatatabletest'),
             nav: true,
-            title: 'Au Datatable'
+            title: 'Au Datatable - MIne'
         }]);
 
         this.router = router;
