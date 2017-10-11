@@ -20,13 +20,21 @@ export class App {
             moduleId: PLATFORM.moduleName('../counter/counter'),
             nav: true,
             title: 'Counter'
-        }, {
-            route: 'fetch-data',
-            name: 'fetchdata',
+        },
+         {
+            route: 'serverSideDemopage',
+            name: 'serverSideDemopage',
             settings: { icon: 'th-list' },
-            moduleId: PLATFORM.moduleName('../fetchdata/fetchdata'),
+            moduleId: PLATFORM.moduleName('../server-side-demo-page/server-side-demo-page'),
             nav: true,
-            title: 'Fetch data'
+            title: 'Au Datatable - Working'
+        }, {
+            route: 'audatatabletest',
+            name: 'audatatabletest',
+            settings: { icon: 'th-list' },
+            moduleId: PLATFORM.moduleName('../audatatable/audatatabletest'),
+            nav: true,
+            title: 'Au Datatable'
         }]);
 
         this.router = router;

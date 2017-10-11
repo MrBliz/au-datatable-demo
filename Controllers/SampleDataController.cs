@@ -11,7 +11,7 @@ namespace Gridtests.Controllers
   [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
-        [HttpGet("[action]")]
+        [HttpPost("[action]")]
         public PagedResponse<WeatherForecast> WeatherForecasts(string sortProperty = "summary", string direction = "asc", int pageSize = 25, int pageNumber = 1)
         {
             var data = SeedData.GetForecasts(pageNumber, pageSize, sortProperty, direction);
