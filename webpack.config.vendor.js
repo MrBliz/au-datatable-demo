@@ -33,7 +33,8 @@ module.exports = ({ prod } = {}) => {
                 'aurelia-templating-router',
                 'bootstrap',
                 'bootstrap/dist/css/bootstrap.css',
-                'jquery'
+                'jquery',
+                'au-datatable'
             ],
         },
         output: {

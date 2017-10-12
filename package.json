@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "dependencies": {
-    "au-datatable": "^1.0.0-beta-002",
+    "au-datatable": "git://github.com/dtaalbers/au-datatable",
     "aurelia-bootstrapper": "^2.0.1",
     "aurelia-fetch-client": "^1.0.1",
     "aurelia-framework": "^1.1.0",

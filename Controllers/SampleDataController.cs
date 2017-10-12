@@ -11,7 +11,7 @@ namespace Gridtests.Controllers
   [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
-        [HttpPost("[action]")]
+        [HttpGet("[action]")]
         public PagedResponse<WeatherForecast> WeatherForecasts(string sortProperty = "summary", string direction = "asc", int pageSize = 25, int pageNumber = 1)
         {
             var data = SeedData.GetForecasts(pageNumber, pageSize, sortProperty, direction);
@@ -51,11 +51,19 @@ namespace Gridtests.Controllers
 
             bool ascending = direction == "asc";
 
-            query = sortProperty == "dateFormatted" ? query.OrderBy(X => X.DateFormatted) : query.OrderByDescending(X => X.DateFormatted);
-            query = sortProperty == "temperatureC" ? query.OrderBy(X => X.TemperatureC) : query.OrderByDescending(X => X.TemperatureC);
-            query = sortProperty == "temperatureF" ? query.OrderBy(X => X.TemperatureF) : query.OrderByDescending(X => X.TemperatureF);
-            query = sortProperty == "summary" ? query.OrderBy(X => X.Summary) : query.OrderByDescending(X => X.Summary);
-
+            if(sortProperty == "dateFormatted" ){
+               query =  ascending ? query.OrderBy(X => X.DateFormatted) : query.OrderByDescending(X => X.DateFormatted);
+            }
+            if(sortProperty == "temperatureC" ){
+               query =  ascending ? query.OrderBy(X => X.TemperatureC) : query.OrderByDescending(X => X.TemperatureC);
+            }
+            if(sortProperty == "temperatureF" ){
+               query =  ascending ? query.OrderBy(X => X.TemperatureF) : query.OrderByDescending(X => X.TemperatureF);
+            }
+            if(sortProperty == "summary" ){
+               query =  ascending ? query.OrderBy(X => X.Summary) : query.OrderByDescending(X => X.Summary);
+            }
+            
             return query.ToPagedList(pageNumber, pageSize);
         }
 

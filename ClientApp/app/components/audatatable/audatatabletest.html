@@ -2,7 +2,7 @@
     <div class="header">
         <div class="row">
             <div class="col-md-2">
-                <au-datatable-pagesize page-sizes.bind="[10,25,50,100]" classes="form-control" on-page-size-change.bind="pageSizeChanged"
+                <au-datatable-pagesize page-sizes.bind="[25,50,100]" classes="form-control" on-page-size-change.bind="pageSizeChanged"
                     parameters.bind="parameters">
                 </au-datatable-pagesize>
             </div>
@@ -10,7 +10,7 @@
     </div>
 
     <table class="table table-bordered table-striped" au-datatable="starting-data.bind: data; parameters.bind: parameters;">
-        <thead au-datatable-sort="columns.bind: [1,2,3,4]; on-sort.bind: sort; parameters.bind: parameters">
+        <thead au-datatable-sort="columns.bind: [0,1,2,3]; on-sort.bind: sort; parameters.bind: parameters">
             <tr>
                 <th>Summary</th>
                 <th>Date</th>
@@ -20,10 +20,10 @@
         </thead>
         <tbody>
             <tr repeat.for="item of parameters.tableData">
-                <td>${item.summary}></td>
-                <td>${item.dateFormatted}></td>
-                <td>${item.temperatureF}></td>
-                <td>${item.temperatureC}></td>
+                <td>${item.summary}</td>
+                <td>${item.dateFormatted}</td>
+                <td>${item.temperatureF}</td>
+                <td>${item.temperatureC}</td>
         </tbody>
     </table>
     <div class="footer">
